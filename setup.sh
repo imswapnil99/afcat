@@ -15,9 +15,11 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 
 sudo yum install jenkins java-1.8.0-openjdk-devel -y
 sudo systemctl daemon-reload
-sudo systemctl status jenkins
+
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
+sudo systemctl status jenkins
+
 echo "$name jenkins setup completed"
 echo "what is aws public / localhost ip??"
 read ip
