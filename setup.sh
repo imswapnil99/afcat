@@ -1,4 +1,12 @@
 #!/bin/sh
+echo "what is your name?"
+read name
+echo "How do you do, $name?"
+read remark
+echo "I am $remark too!"
+
+echo "Please be patient ->> INSTALLATION WILL TAKE SOME TIME ;)"
+
 sudo su - root
 yum install wget -y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
@@ -10,7 +18,8 @@ sudo systemctl daemon-reload
 sudo systemctl status jenkins
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
-echo "Jenkins setup done"
-echo "what is aws public ip??"
+echo "$name jenkins setup completed"
+echo "what is aws public / localhost ip??"
 read ip
-echo "use this URL $ip:8080"
+echo "use this URL --->>>>  http://$ip:8080/  "
+echo "HAVE A GREAT DAY & WEAR MASK"
