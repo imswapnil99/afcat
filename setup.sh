@@ -23,5 +23,12 @@ sudo systemctl status jenkins
 echo "$name jenkins setup completed"
 echo "what is aws public / localhost ip??"
 read ip
+
+pass=$(cat /var/lib/jenkins/secrets/initialAdminPassword)
+
 echo "use this URL --->>>>  http://$ip:8080/  "
+echo "user: admin"
+echo "passwork is :  $pass "
+
+
 echo "HAVE A GREAT DAY & WEAR MASK"
