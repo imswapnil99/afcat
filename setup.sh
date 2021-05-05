@@ -18,8 +18,8 @@ sudo systemctl daemon-reload
 
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
-sudo systemctl status jenkins
-
+#sudo systemctl status jenkins
+echo "jenkins Stared"
 echo "$name jenkins setup completed"
 echo "what is aws public / localhost ip??"
 read ip
